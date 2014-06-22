@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9426F29D-976D-4A80-818F-2019DD02A7F2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ex4_GroupAndTeam</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B0DA7CE1-FB11-4740-9DAF-5CECC623CE5F</key>
+		<string>https://github.com/appcodev/Objective-C_iOS7_Xcode5.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ex4_extra_GroupAndTeam/Ex4_GroupAndTeam.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B0DA7CE1-FB11-4740-9DAF-5CECC623CE5F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/appcodev/Objective-C_iOS7_Xcode5.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B0DA7CE1-FB11-4740-9DAF-5CECC623CE5F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B0DA7CE1-FB11-4740-9DAF-5CECC623CE5F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Objective-C_iOS7_Xcode5</string>
+		</dict>
+	</array>
+</dict>
+</plist>
