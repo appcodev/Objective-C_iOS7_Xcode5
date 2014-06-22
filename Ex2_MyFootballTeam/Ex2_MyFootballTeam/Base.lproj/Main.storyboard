@@ -60,10 +60,10 @@
                                     <action selector="nextView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Fu-mW-ExG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Favorite Football Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-65-yen">
-                                <rect key="frame" x="20" y="44" width="280" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite Football Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-65-yen">
+                                <rect key="frame" x="20" y="56" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -95,11 +95,8 @@
                         <color key="backgroundColor" red="0.70588237047195435" green="0.79215693473815918" blue="0.89019614458084106" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="hwa-yl-3Ug" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="5" id="Aem-xp-SZF"/>
-                            <constraint firstItem="LsV-65-yen" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="24" id="fPf-tf-ynq"/>
                             <constraint firstAttribute="trailing" secondItem="hwa-yl-3Ug" secondAttribute="trailing" constant="5" id="mgt-re-61g"/>
-                            <constraint firstItem="LsV-65-yen" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="n28-tK-phm"/>
                             <constraint firstItem="hwa-yl-3Ug" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="5" id="puh-Rm-nHd"/>
-                            <constraint firstAttribute="trailing" secondItem="LsV-65-yen" secondAttribute="trailing" constant="20" id="sDA-lo-tf0"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hwa-yl-3Ug" secondAttribute="bottom" constant="5" id="ykU-1f-IPE"/>
                         </constraints>
                     </view>

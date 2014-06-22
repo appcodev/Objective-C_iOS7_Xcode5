@@ -19,6 +19,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIFont *font = [UIFont fontWithName:@"Brasil 14" size:25];
+    for (UIView *view in self.view.subviews) {
+        if ([view isKindOfClass:[UILabel class]]) {
+            [(UILabel*)view setFont:font];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
