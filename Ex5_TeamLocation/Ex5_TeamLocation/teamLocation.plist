@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>algeria</key>
+	<string>27.718210, 1.315104</string>
+	<key>argentina</key>
+	<string>-39.183975, -62.192671</string>
+	<key>australia</key>
+	<string>-25.811291, 134.336010</string>
+	<key>belgium</key>
+	<string>50.585530, 4.520405</string>
+	<key>bosnia-herzegovina</key>
+	<string>43.947973, 17.694123</string>
+	<key>brazil</key>
+	<string>-13.899058, -52.125814</string>
+	<key>cameroon</key>
+	<string>6.933616, 12.432476</string>
+	<key>chile</key>
+	<string>-35.460844, -71.936400</string>
+	<key>colombia</key>
+	<string>4.115674, -73.281699</string>
+	<key>costa_rica</key>
+	<string>10.003667, -84.111362</string>
+	<key>côte_d&apos;lvoire</key>
+	<string>7.687073, -5.591490</string>
+	<key>croatia</key>
+	<string>45.105331, 15.304321</string>
+	<key>ecuador</key>
+	<string>-1.397613, -78.543382</string>
+	<key>england</key>
+	<string>52.364779, -1.339826</string>
+	<key>france</key>
+	<string>46.484624, 2.356311</string>
+	<key>germany</key>
+	<string>50.998587, 10.388201</string>
+	<key>ghana</key>
+	<string>7.931009, -1.217479</string>
+	<key>greece</key>
+	<string>39.404470, 22.118377</string>
+	<key>honduras</key>
+	<string>14.771630, -87.279549</string>
+	<key>iran</key>
+	<string>32.030207, 54.385739</string>
+	<key>italy</key>
+	<string>43.291401, 11.936404</string>
+	<key>japan</key>
+	<string>35.797682, 137.916596</string>
+	<key>korea_republic</key>
+	<string>37.547138, 126.952075</string>
+	<key>mexico</key>
+	<string>19.423742, -99.126092</string>
+	<key>netherlands</key>
+	<string>52.206260, 5.641919</string>
+	<key>nigeria</key>
+	<string>9.359706, 7.688687</string>
+	<key>portugal</key>
+	<string>39.624921, -8.304099</string>
+	<key>russia</key>
+	<string>60.949384, 104.757812</string>
+	<key>spain</key>
+	<string>40.325862, -3.449328</string>
+	<key>switzerland</key>
+	<string>46.809428, 7.850675</string>
+	<key>uruguay</key>
+	<string>-32.872595, -56.185256</string>
+	<key>usa</key>
+	<string>39.659542, -101.202109</string>
+</dict>
+</plist>
