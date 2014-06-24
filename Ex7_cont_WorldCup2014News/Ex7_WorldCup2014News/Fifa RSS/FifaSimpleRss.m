@@ -37,6 +37,8 @@
         //date formatter
         //dateFormatter = [[NSDateFormatter alloc] init];
         //Tue, 24 Jun 2014 08:23:00 GMT
+        
+        //[dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US"]];
         //[dateFormatter setDateFormat:@"EEE, d MM yyyy HH:mm:ss zzz"];
         //[dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
     }
@@ -118,6 +120,7 @@
         }else if([currentElement isEqualToString:@"copyright"]){
             _copyright = text;
         }else if([currentElement isEqualToString:@"pubDate"]){
+            
             _pubDate = text;
         }else if([currentElement isEqualToString:@"lastBuildDate"]){
             _lastBuildDate = text;
@@ -151,5 +154,7 @@
     }
     
 }
+
+
 
 @end

@@ -29,4 +29,6 @@
     return [NSString stringWithFormat:@"|||ITEM|||\ntitle:%@\nlink:%@\ndesc:%@\nimage url:%@\npub date:%@\ncategory:%@",_title,_link,_desc,_imageURL,_pubDate,_category];
 }
 
+
+
 @end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NewsWebViewController.h"
+#import "UIImageView+AFNetworking.h"
 #import "FifaSimpleRss.h"
 
 #define rss_feed_url    @"http://www.fifa.com/worldcup/news/rss.xml"
@@ -19,6 +20,8 @@
     
     IBOutlet UIActivityIndicatorView *loadingIcon;
     IBOutlet UITableView *newsTable;
+
+    UIRefreshControl *refreshControl;
 }
 
 @end
@@ -34,6 +37,10 @@
     UINib *nib = [UINib nibWithNibName:@"NewsCellViewTableViewCell" bundle:[NSBundle mainBundle]];
     [newsTable registerNib:nib forCellReuseIdentifier:@"cell"];
     
+    //refresh control
+    refreshControl = [[UIRefreshControl alloc] init];
+    [newsTable addSubview:refreshControl];
+    [refreshControl addTarget:self action:@selector(connect) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -49,6 +56,8 @@
 
 //////////// network connect
 - (void)connect{
+    [loadingIcon startAnimating];
+    
     NSURL *url = [NSURL URLWithString:rss_feed_url];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -56,6 +65,8 @@
     
     if (connection) {
         feedData = [NSMutableData new];
+        
+        [refreshControl endRefreshing];
     }
 }
 
@@ -71,6 +82,13 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
     NSLog(@"Connect Error: %@",error);
+    
+    [[[UIAlertView alloc] initWithTitle:@"---!"
+                               message:[error description]
+                              delegate:nil
+                     cancelButtonTitle:@"Close"
+                      otherButtonTitles:nil] show];
+    [loadingIcon stopAnimating];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
@@ -142,9 +160,41 @@
     UILabel *date = (UILabel*)[cell viewWithTag:2];
     date.text = item.pubDate;
     
+    __weak UIImageView *imageView = (UIImageView*)[cell viewWithTag:3];
+//    //Way 1 ... load image data directly ...
+//    NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:item.imageURL]];
+//    imageView.image = [[UIImage alloc] initWithData:imageData];
+    
+    //Way 2 ... load in background thread ...
+//    NSDictionary *data = @{@"imageView":imageView,
+//                           @"url":item.imageURL};
+//    [self performSelectorInBackground:@selector(loadImage:) withObject:data];
+    
+    //Way 3 ... Use https://github.com/AFNetworking/AFNetworking ...
+    NSURLRequest *urlReq = [NSURLRequest requestWithURL:[NSURL URLWithString:item.imageURL]];
+    [imageView setImageWithURLRequest:urlReq
+                 placeholderImage:[UIImage imageNamed:@"placeholder"]
+                          success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                              imageView.image = image;
+                          } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                              NSLog(@"Fail!");
+                          }];
+    
+    
     return cell;
     
 }
+
+//- (void)loadImage:(NSDictionary*)data{
+//    @autoreleasepool {
+//        UIImageView *imageView = data[@"imageView"];
+//        NSString *urlText = data[@"url"];
+//        
+//        NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:urlText]];
+//        imageView.image = [[UIImage alloc] initWithData:imageData];
+//    }
+//    
+//}
 
 
 /////////////////////////// Table View Delegate ///////////////////////////////
