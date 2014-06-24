@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>team_name</key>
+	<array>
+		<string>algeria</string>
+        <string>argentina</string>
+        <string>australia</string>
+        <string>belgium</string>
+        <string>bosnia-herzegovina</string>
+        <string>brazil</string>
+        <string>cameroon</string>
+        <string>chile</string>
+        <string>colombia</string>
+        <string>costa_rica</string>
+        <string>côte_d'lvoire</string>
+        <string>croatia</string>
+        <string>ecuador</string>
+        <string>england</string>
+        <string>france</string>
+        <string>germany</string>
+        <string>ghana</string>
+        <string>greece</string>
+        <string>honduras</string>
+        <string>iran</string>
+        <string>italy</string>
+        <string>japan</string>
+        <string>korea_republic</string>
+        <string>mexico</string>
+        <string>netherlands</string>
+        <string>nigeria</string>
+        <string>portugal</string>
+        <string>russia</string>
+        <string>spain</string>
+        <string>switzerland</string>
+        <string>uruguay</string>
+        <string>usa</string>
+	</array>
+</dict>
+</plist>
