@@ -7,6 +7,7 @@
 //
 
 #import "AddMatchViewController.h"
+#import "DBHelper.h"
 
 @interface AddMatchViewController (){
     
@@ -50,13 +51,23 @@
     if (teamAIndex!=teamBIndex) {
         //save score ...
         
-        
+        BOOL addOk = [[DBHelper sharedInstance] addNewMatchTeamA:listTeamsName[teamAIndex]
+                                                          scoreA:[teamAScore.text intValue]
+                                                           teamB:listTeamsName[teamBIndex]
+                                                          scoreB:[teamBScore.text intValue]];
+       
         
         //alert success ...
         NSString *text = [NSString stringWithFormat:@"%@ %@ - %@ %@",listTeamsName[teamAIndex],teamAScore.text,teamBScore.text,listTeamsName[teamBIndex]];
-        [[[UIAlertView alloc] initWithTitle:@"-Save Completed-^^"
+        NSString *title = @"-Save Completed-^^";
+        if (!addOk) {
+            text = @"FAIL!!!";
+            title = @"---!";
+        }
+        
+        [[[UIAlertView alloc] initWithTitle:title
                                     message:text
-                                   delegate:self
+                                   delegate:addOk?self:nil
                           cancelButtonTitle:@"Close"
                           otherButtonTitles:nil] show];
         

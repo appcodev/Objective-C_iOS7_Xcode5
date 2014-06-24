@@ -122,6 +122,8 @@
 		37742FAB1958F0E20074BC20 /* s_switzerland.png in Resources */ = {isa = PBXBuildFile; fileRef = 37742F4B1958F0E20074BC20 /* s_switzerland.png */; };
 		37742FAC1958F0E20074BC20 /* s_uruguay.png in Resources */ = {isa = PBXBuildFile; fileRef = 37742F4C1958F0E20074BC20 /* s_uruguay.png */; };
 		37742FAD1958F0E20074BC20 /* s_usa.png in Resources */ = {isa = PBXBuildFile; fileRef = 37742F4D1958F0E20074BC20 /* s_usa.png */; };
+		37742FB01958FB5F0074BC20 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 37742FAF1958FB5F0074BC20 /* DBHelper.m */; };
+		37742FB3195912AA0074BC20 /* Match.m in Sources */ = {isa = PBXBuildFile; fileRef = 37742FB2195912AA0074BC20 /* Match.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +258,10 @@
 		37742F4B1958F0E20074BC20 /* s_switzerland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_switzerland.png; sourceTree = "<group>"; };
 		37742F4C1958F0E20074BC20 /* s_uruguay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_uruguay.png; sourceTree = "<group>"; };
 		37742F4D1958F0E20074BC20 /* s_usa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_usa.png; sourceTree = "<group>"; };
+		37742FAE1958FB5F0074BC20 /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		37742FAF1958FB5F0074BC20 /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		37742FB1195912AA0074BC20 /* Match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Match.h; sourceTree = "<group>"; };
+		37742FB2195912AA0074BC20 /* Match.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Match.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +333,10 @@
 				37742EE51958D42D0074BC20 /* ScoreTableViewCell.xib */,
 				37742EE81958E4650074BC20 /* AddMatchViewController.h */,
 				37742EE91958E4650074BC20 /* AddMatchViewController.m */,
+				37742FAE1958FB5F0074BC20 /* DBHelper.h */,
+				37742FAF1958FB5F0074BC20 /* DBHelper.m */,
+				37742FB1195912AA0074BC20 /* Match.h */,
+				37742FB2195912AA0074BC20 /* Match.m */,
 			);
 			path = Ex6_ScoreTable;
 			sourceTree = "<group>";
@@ -663,7 +673,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37742EEA1958E4650074BC20 /* AddMatchViewController.m in Sources */,
+				37742FB01958FB5F0074BC20 /* DBHelper.m in Sources */,
 				37742EC11958D0240074BC20 /* ViewController.m in Sources */,
+				37742FB3195912AA0074BC20 /* Match.m in Sources */,
 				37742EBB1958D0240074BC20 /* AppDelegate.m in Sources */,
 				37742EB71958D0240074BC20 /* main.m in Sources */,
 			);
