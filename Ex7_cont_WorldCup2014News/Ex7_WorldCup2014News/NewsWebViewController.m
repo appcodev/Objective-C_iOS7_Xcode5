@@ -7,6 +7,7 @@
 //
 
 #import "NewsWebViewController.h"
+#import <Social/Social.h>
 
 @interface NewsWebViewController ()<UIWebViewDelegate>{
     
@@ -42,6 +43,42 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     [loadingIcon stopAnimating];
+}
+
+- (IBAction)action:(id)sender {
+    [self shareToFacebook];
+}
+
+- (void)shareService{
+    
+    NSArray *Items = @[_openURL];
+    
+    UIActivityViewController *activityView = [[UIActivityViewController alloc]
+                                              initWithActivityItems:Items
+                                              applicationActivities:nil];
+    
+    [self presentViewController:activityView animated:YES completion:nil];
+}
+
+- (void)shareToFacebook{
+    /*
+     Fb : SLServiceTypeFacebook
+     Twitter : SLServiceTypeTwitter
+     */
+    
+    SLComposeViewController *slView = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    
+    [slView setInitialText:[NSString stringWithFormat:@"This %@",_openURL]];
+    
+    //capture screen
+    UIGraphicsBeginImageContext(self.view.bounds.size);
+    [self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:YES];
+    UIImage *captureScreen = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    [slView addImage:captureScreen];
+    
+    [self presentViewController:slView animated:YES completion:nil];
 }
 
 @end

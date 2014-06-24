@@ -101,7 +101,13 @@
                             <constraint firstAttribute="trailing" secondItem="I1I-uY-tiS" secondAttribute="trailing" id="xMl-uV-Qsb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="News" id="iI6-VR-sVF"/>
+                    <navigationItem key="navigationItem" title="News" id="iI6-VR-sVF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="FNu-Iq-jEI">
+                            <connections>
+                                <action selector="action:" destination="Faw-rL-tL1" id="mNN-35-EoC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="loadingIcon" destination="9JY-fZ-IXd" id="zux-Nx-mSQ"/>
                         <outlet property="webView" destination="I1I-uY-tiS" id="9wH-ii-SGd"/>

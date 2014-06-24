@@ -42,6 +42,7 @@
 		37743038195A1BD90074BC20 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743025195A1BD90074BC20 /* UIProgressView+AFNetworking.m */; };
 		37743039195A1BD90074BC20 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743027195A1BD90074BC20 /* UIRefreshControl+AFNetworking.m */; };
 		3774303A195A1BD90074BC20 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743029195A1BD90074BC20 /* UIWebView+AFNetworking.m */; };
+		3774303C195A20480074BC20 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3774303B195A20480074BC20 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		37743027195A1BD90074BC20 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		37743028195A1BD90074BC20 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		37743029195A1BD90074BC20 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		3774303B195A20480074BC20 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3774303C195A20480074BC20 /* Social.framework in Frameworks */,
 				37742FC319593A570074BC20 /* CoreGraphics.framework in Frameworks */,
 				37742FC519593A570074BC20 /* UIKit.framework in Frameworks */,
 				37742FC119593A570074BC20 /* Foundation.framework in Frameworks */,
@@ -165,6 +168,7 @@
 		37742FBF19593A570074BC20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3774303B195A20480074BC20 /* Social.framework */,
 				37742FC019593A570074BC20 /* Foundation.framework */,
 				37742FC219593A570074BC20 /* CoreGraphics.framework */,
 				37742FC419593A570074BC20 /* UIKit.framework */,
