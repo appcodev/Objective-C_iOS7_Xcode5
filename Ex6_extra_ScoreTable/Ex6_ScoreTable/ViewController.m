@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AddMatchViewController.h"
 #import "DBHelper.h"
 #import "Match.h"
 
@@ -101,5 +102,15 @@
     
 }
 
+//////////////////// Table View Delegate //////////////////
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"go" sender:allMatchsScore[indexPath.row]];
+}
 
+//// prepare for segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"go"]) {
+        [(AddMatchViewController*)segue.destinationViewController setFixEditMatch:sender];
+    }
+}
 @end

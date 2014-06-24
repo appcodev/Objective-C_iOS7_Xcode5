@@ -8,6 +8,7 @@
 
 #import "AddMatchViewController.h"
 #import "DBHelper.h"
+#import "Match.h"
 
 @interface AddMatchViewController (){
     
@@ -17,6 +18,8 @@
     
     NSArray *listTeamsName;
     int teamAIndex,teamBIndex;
+    
+    BOOL updateMatch;
 }
 
 @end
@@ -32,6 +35,28 @@
     NSString *file = [[NSBundle mainBundle] pathForResource:@"footballTeams" ofType:@"plist"];
     NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:file];
     listTeamsName = data[@"team_name"];
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    if (_fixEditMatch!=nil) {
+        updateMatch = YES;
+        //update score
+        teamAScore.text = [NSString stringWithFormat:@"%d",_fixEditMatch.teamAScore];
+        teamBScore.text = [NSString stringWithFormat:@"%d",_fixEditMatch.teamBScore];
+        //update picker
+        teamAIndex = [listTeamsName indexOfObject:_fixEditMatch.teamA];
+        teamBIndex = [listTeamsName indexOfObject:_fixEditMatch.teamB];
+        
+        [teamNamePicker selectRow:teamAIndex
+                      inComponent:0 animated:YES];
+        [teamNamePicker selectRow:teamBIndex
+                      inComponent:1 animated:YES];
+        
+        //title
+        self.navigationItem.title = @"Edit Match";
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,24 +75,31 @@
 - (IBAction)submitScore {
     if (teamAIndex!=teamBIndex) {
         //save score ...
-        
-        BOOL addOk = [[DBHelper sharedInstance] addNewMatchTeamA:listTeamsName[teamAIndex]
+        BOOL itDone = NO;
+        if (updateMatch) {
+            itDone = [[DBHelper sharedInstance] updateMatchId:_fixEditMatch.matchId
+                                                        teamA:listTeamsName[teamAIndex]
+                                                       scoreA:[teamAScore.text intValue]
+                                                        teamB:listTeamsName[teamBIndex]
+                                                       scoreB:[teamBScore.text intValue]];
+        }else{
+            itDone = [[DBHelper sharedInstance] addNewMatchTeamA:listTeamsName[teamAIndex]
                                                           scoreA:[teamAScore.text intValue]
                                                            teamB:listTeamsName[teamBIndex]
                                                           scoreB:[teamBScore.text intValue]];
-       
+        }
         
         //alert success ...
         NSString *text = [NSString stringWithFormat:@"%@ %@ - %@ %@",listTeamsName[teamAIndex],teamAScore.text,teamBScore.text,listTeamsName[teamBIndex]];
-        NSString *title = @"-Save Completed-^^";
-        if (!addOk) {
+        NSString *title = @"- Save Completed -^^";
+        if (!itDone) {
             text = @"FAIL!!!";
             title = @"---!";
         }
         
         [[[UIAlertView alloc] initWithTitle:title
                                     message:text
-                                   delegate:addOk?self:nil
+                                   delegate:itDone?self:nil
                           cancelButtonTitle:@"Close"
                           otherButtonTitles:nil] show];
         

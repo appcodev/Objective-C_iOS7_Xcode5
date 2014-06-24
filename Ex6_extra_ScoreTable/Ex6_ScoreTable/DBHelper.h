@@ -23,5 +23,6 @@
 - (NSArray*)allMatchs;
 //delete
 - (BOOL)deleteRecordId:(int)matchId;
-
+//update
+- (BOOL)updateMatchId:(int)matchId teamA:(NSString*)teamA scoreA:(int)scoreA teamB:(NSString*)teamB scoreB:(int)scoreB;
 @end

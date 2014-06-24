@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Match;
+
 @interface AddMatchViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate,UIAlertViewDelegate>
+
+@property (nonatomic,strong) Match *fixEditMatch;
 
 @end

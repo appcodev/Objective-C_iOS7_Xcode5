@@ -46,12 +46,13 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="JpB-OL-hAD"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NiT-XS-6Sw">
                             <connections>
-                                <segue destination="tIk-NX-6PF" kind="push" id="gdW-Nf-RXn"/>
+                                <segue destination="tIk-NX-6PF" kind="push" identifier="" id="gdW-Nf-RXn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="scoreTableView" destination="EuK-gX-3i2" id="NsT-VZ-9cE"/>
+                        <segue destination="tIk-NX-6PF" kind="push" identifier="go" id="fiu-kM-mHj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -172,4 +173,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="fiu-kM-mHj"/>
+    </inferredMetricsTieBreakers>
 </document>

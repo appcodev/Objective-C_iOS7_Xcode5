@@ -123,7 +123,35 @@
         teamB = [self recheckString:teamB];
         
         NSString *sql = [NSString stringWithFormat:@"insert into tb_match (teamA_name,teamB_name,teamA_score,teamB_score) values ('%@','%@',%d,%d)",teamA,teamB,scoreA,scoreB];
-        NSLog(@"sql : %@",sql);
+        
+        sqlite3_stmt *stmt;
+        if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, NULL) == SQLITE_OK) {
+            
+            if (sqlite3_step(stmt)==SQLITE_DONE) {
+                return YES;
+            }
+            
+        }else{
+            NSLog(@"DB FAIL! : SQL Stement");
+        }
+        
+    }else{
+        NSLog(@"DB FAIL! : Open Database file");
+    }
+    
+    return NO;
+}
+
+//update
+- (BOOL)updateMatchId:(int)matchId teamA:(NSString*)teamA scoreA:(int)scoreA teamB:(NSString*)teamB scoreB:(int)scoreB{
+    sqlite3 *db;
+    
+    if (sqlite3_open([_dbPath UTF8String], &db) == SQLITE_OK) {
+        
+        teamA = [self recheckString:teamA];
+        teamB = [self recheckString:teamB];
+        
+        NSString *sql = [NSString stringWithFormat:@"update tb_match set teamA_name='%@',teamB_name='%@',teamA_score=%d,teamB_score=%d where id=%d",teamA,teamB,scoreA,scoreB,matchId];
         
         sqlite3_stmt *stmt;
         if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, NULL) == SQLITE_OK) {
