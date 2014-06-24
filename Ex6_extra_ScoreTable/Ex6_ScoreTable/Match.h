@@ -11,6 +11,6 @@
 @interface Match : NSObject
 
 @property (nonatomic,strong) NSString *teamA,*teamB;
-@property (nonatomic,readwrite) int teamAScore,teamBScore;
+@property (nonatomic,readwrite) int matchId,teamAScore,teamBScore;
 
 @end

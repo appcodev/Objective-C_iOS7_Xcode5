@@ -21,5 +21,7 @@
 - (BOOL)addNewMatchTeamA:(NSString*)teamA scoreA:(int)scoreA teamB:(NSString*)teamB scoreB:(int)scoreB;
 //select
 - (NSArray*)allMatchs;
+//delete
+- (BOOL)deleteRecordId:(int)matchId;
 
 @end

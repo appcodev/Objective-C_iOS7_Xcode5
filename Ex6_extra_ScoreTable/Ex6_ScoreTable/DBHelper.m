@@ -100,6 +100,18 @@
 
 */
 ///////////////////////////////////////////////////////////////////
+- (NSString*)recheckString:(NSString*)text{
+    NSRange range = [text rangeOfString:@"'"];
+    if (range.location!=NSNotFound) {
+        NSMutableString *mText = [text mutableCopy];
+        [mText insertString:@"'" atIndex:range.location];
+        return mText;
+    }
+    
+    
+    return text;
+}
+
 
 //insert
 - (BOOL)addNewMatchTeamA:(NSString*)teamA scoreA:(int)scoreA teamB:(NSString*)teamB scoreB:(int)scoreB{
@@ -107,7 +119,12 @@
     
     if (sqlite3_open([_dbPath UTF8String], &db) == SQLITE_OK) {
         
+        teamA = [self recheckString:teamA];
+        teamB = [self recheckString:teamB];
+        
         NSString *sql = [NSString stringWithFormat:@"insert into tb_match (teamA_name,teamB_name,teamA_score,teamB_score) values ('%@','%@',%d,%d)",teamA,teamB,scoreA,scoreB];
+        NSLog(@"sql : %@",sql);
+        
         sqlite3_stmt *stmt;
         if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, NULL) == SQLITE_OK) {
             
@@ -139,12 +156,13 @@
             
             while(sqlite3_step(stmt)==SQLITE_ROW) {
                 Match *m = [[Match alloc] init];
-                
+                int matchId = sqlite3_column_int(stmt, 0);
                 const char *teamA = (const char*)sqlite3_column_text(stmt, 1);
                 int teamAScore = sqlite3_column_int(stmt, 2);
                 const char *teamB = (const char*)sqlite3_column_text(stmt, 3);
                 int teamBScore = sqlite3_column_int(stmt, 4);
                 
+                m.matchId = matchId;
                 m.teamA = [NSString stringWithUTF8String:teamA];
                 m.teamAScore = teamAScore;
                 m.teamB = [NSString stringWithUTF8String:teamB];
@@ -164,6 +182,34 @@
     }
     
     return rsArray;
+    
+    
+}
+
+//delete
+- (BOOL)deleteRecordId:(int)matchId{
+    
+    sqlite3 *db;
+    
+    if (sqlite3_open([_dbPath UTF8String], &db) == SQLITE_OK) {
+        
+        NSString *sql = [NSString stringWithFormat:@"delete from tb_match where id=%d",matchId];
+        sqlite3_stmt *stmt;
+        if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, NULL) == SQLITE_OK) {
+            
+            if (sqlite3_step(stmt)==SQLITE_DONE) {
+                return YES;
+            }
+            
+        }else{
+            NSLog(@"DB FAIL! : SQL Stement");
+        }
+        
+    }else{
+        NSLog(@"DB FAIL! : Open Database file");
+    }
+    
+    return NO;
     
     
 }

@@ -13,7 +13,7 @@
 @interface ViewController (){
     
     IBOutlet UITableView *scoreTableView;
-    NSArray *allMatchsScore;
+    NSMutableArray *allMatchsScore;
 }
 
 @end
@@ -33,7 +33,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     //db load
-    allMatchsScore = [[DBHelper sharedInstance] allMatchs];
+    allMatchsScore = [[[DBHelper sharedInstance] allMatchs] mutableCopy];
     
     [scoreTableView reloadData];
 }
@@ -81,6 +81,24 @@
     
     
     return cell;
+}
+
+//delete
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Match *match = allMatchsScore[indexPath.row];
+        
+        //on database
+        [[DBHelper sharedInstance] deleteRecordId:match.matchId];
+        //from array
+        [allMatchsScore removeObject:match];
+        //from table
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+    }
+    
+    
 }
 
 //////////////////// Table View Delegate //////////////////

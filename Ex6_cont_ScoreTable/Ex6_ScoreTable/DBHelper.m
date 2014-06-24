@@ -100,12 +100,26 @@
 
 */
 ///////////////////////////////////////////////////////////////////
+- (NSString*)recheckString:(NSString*)text{
+    NSRange range = [text rangeOfString:@"'"];
+    if (range.location!=NSNotFound) {
+        NSMutableString *mText = [text mutableCopy];
+        [mText insertString:@"'" atIndex:range.location];
+        return mText;
+    }
+    
+    
+    return text;
+}
 
 //insert
 - (BOOL)addNewMatchTeamA:(NSString*)teamA scoreA:(int)scoreA teamB:(NSString*)teamB scoreB:(int)scoreB{
     sqlite3 *db;
     
     if (sqlite3_open([_dbPath UTF8String], &db) == SQLITE_OK) {
+        
+        teamA = [self recheckString:teamA];
+        teamB = [self recheckString:teamB];
         
         NSString *sql = [NSString stringWithFormat:@"insert into tb_match (teamA_name,teamB_name,teamA_score,teamB_score) values ('%@','%@',%d,%d)",teamA,teamB,scoreA,scoreB];
         sqlite3_stmt *stmt;
