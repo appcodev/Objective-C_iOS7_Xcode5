@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37742FBC19593A570074BC20"
-               BuildableName = "Ex7_Cont_WorldCup2014News.app"
-               BlueprintName = "Ex7_Cont_WorldCup2014News"
-               ReferencedContainer = "container:Ex7_Cont_WorldCup2014News.xcodeproj">
+               BlueprintIdentifier = "37743045195A31870074BC20"
+               BuildableName = "Ex8_WorldCupTweet.app"
+               BlueprintName = "Ex8_WorldCupTweet"
+               ReferencedContainer = "container:Ex8_WorldCupTweet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37742FDD19593A570074BC20"
-               BuildableName = "Ex7_Cont_WorldCup2014NewsTests.xctest"
-               BlueprintName = "Ex7_Cont_WorldCup2014NewsTests"
-               ReferencedContainer = "container:Ex7_Cont_WorldCup2014News.xcodeproj">
+               BlueprintIdentifier = "37743066195A31870074BC20"
+               BuildableName = "Ex8_WorldCupTweetTests.xctest"
+               BlueprintName = "Ex8_WorldCupTweetTests"
+               ReferencedContainer = "container:Ex8_WorldCupTweet.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37742FBC19593A570074BC20"
-            BuildableName = "Ex7_Cont_WorldCup2014News.app"
-            BlueprintName = "Ex7_Cont_WorldCup2014News"
-            ReferencedContainer = "container:Ex7_Cont_WorldCup2014News.xcodeproj">
+            BlueprintIdentifier = "37743045195A31870074BC20"
+            BuildableName = "Ex8_WorldCupTweet.app"
+            BlueprintName = "Ex8_WorldCupTweet"
+            ReferencedContainer = "container:Ex8_WorldCupTweet.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37742FBC19593A570074BC20"
-            BuildableName = "Ex7_Cont_WorldCup2014News.app"
-            BlueprintName = "Ex7_Cont_WorldCup2014News"
-            ReferencedContainer = "container:Ex7_Cont_WorldCup2014News.xcodeproj">
+            BlueprintIdentifier = "37743045195A31870074BC20"
+            BuildableName = "Ex8_WorldCupTweet.app"
+            BlueprintName = "Ex8_WorldCupTweet"
+            ReferencedContainer = "container:Ex8_WorldCupTweet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37742FBC19593A570074BC20"
-            BuildableName = "Ex7_Cont_WorldCup2014News.app"
-            BlueprintName = "Ex7_Cont_WorldCup2014News"
-            ReferencedContainer = "container:Ex7_Cont_WorldCup2014News.xcodeproj">
+            BlueprintIdentifier = "37743045195A31870074BC20"
+            BuildableName = "Ex8_WorldCupTweet.app"
+            BlueprintName = "Ex8_WorldCupTweet"
+            ReferencedContainer = "container:Ex8_WorldCupTweet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

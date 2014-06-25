@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGa-5h-FTB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hUO-JG-DLe">
+                                <rect key="frame" x="0.0" y="180" width="320" height="344"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="LJs-VR-Jid"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="BAY-Wd-w9M"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWb-D8-8yB">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="refresh" id="BES-VB-ykc">
+                                        <connections>
+                                            <action selector="refresh:" destination="vXZ-lx-hvc" id="cmQ-Yu-aQR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nc3-pb-dRk"/>
+                                    <barButtonItem tag="1" title="FB Share" id="j6J-52-KvD">
+                                        <connections>
+                                            <action selector="share:" destination="vXZ-lx-hvc" id="Jy7-Ge-R9h"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="24" style="plain" systemItem="fixedSpace" id="5qB-CF-KNF"/>
+                                    <barButtonItem tag="2" title="Tweet" id="DOP-wt-odm">
+                                        <connections>
+                                            <action selector="share:" destination="vXZ-lx-hvc" id="xX9-kI-pDi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-va-MAd">
+                                <rect key="frame" x="56" y="536" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hUO-JG-DLe" firstAttribute="top" secondItem="dGa-5h-FTB" secondAttribute="bottom" constant="1" id="9ue-Ji-uQq"/>
+                            <constraint firstItem="iWb-D8-8yB" firstAttribute="top" secondItem="hUO-JG-DLe" secondAttribute="bottom" id="Nv2-qH-gHA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="iWb-D8-8yB" secondAttribute="bottom" id="OdS-oP-9L4"/>
+                            <constraint firstItem="iWb-D8-8yB" firstAttribute="top" secondItem="hUO-JG-DLe" secondAttribute="bottom" id="TQd-uh-if3"/>
+                            <constraint firstItem="hUO-JG-DLe" firstAttribute="top" secondItem="dGa-5h-FTB" secondAttribute="bottom" constant="1" id="wCD-4d-JG9"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8O3-va-MAd" secondAttribute="bottom" constant="12" id="zaL-GV-DB0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIcon" destination="8O3-va-MAd" id="ibk-r1-Jj6"/>
+                        <outlet property="map" destination="dGa-5h-FTB" id="mWS-un-HP0"/>
+                        <outlet property="tweetTable" destination="hUO-JG-DLe" id="lRP-cC-Va0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

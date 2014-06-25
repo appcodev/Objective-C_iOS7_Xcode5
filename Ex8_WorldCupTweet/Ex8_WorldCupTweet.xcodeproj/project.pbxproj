@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3774304A195A31870074BC20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37743049195A31870074BC20 /* Foundation.framework */; };
+		3774304C195A31870074BC20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3774304B195A31870074BC20 /* CoreGraphics.framework */; };
+		3774304E195A31870074BC20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3774304D195A31870074BC20 /* UIKit.framework */; };
+		37743054195A31870074BC20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37743052195A31870074BC20 /* InfoPlist.strings */; };
+		37743056195A31870074BC20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743055195A31870074BC20 /* main.m */; };
+		3774305A195A31870074BC20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743059195A31870074BC20 /* AppDelegate.m */; };
+		3774305D195A31870074BC20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3774305B195A31870074BC20 /* Main.storyboard */; };
+		37743060195A31870074BC20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774305F195A31870074BC20 /* ViewController.m */; };
+		37743062195A31870074BC20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37743061195A31870074BC20 /* Images.xcassets */; };
+		37743069195A31870074BC20 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37743068195A31870074BC20 /* XCTest.framework */; };
+		3774306A195A31870074BC20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37743049195A31870074BC20 /* Foundation.framework */; };
+		3774306B195A31870074BC20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3774304D195A31870074BC20 /* UIKit.framework */; };
+		37743073195A31870074BC20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37743071195A31870074BC20 /* InfoPlist.strings */; };
+		37743075195A31870074BC20 /* Ex8_WorldCupTweetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743074195A31870074BC20 /* Ex8_WorldCupTweetTests.m */; };
+		3774307F195A33DA0074BC20 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3774307E195A33DA0074BC20 /* Accounts.framework */; };
+		37743081195A33EE0074BC20 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37743080195A33EE0074BC20 /* MapKit.framework */; };
+		37743083195A33F40074BC20 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37743082195A33F40074BC20 /* Social.framework */; };
+		3774308B195A44440074BC20 /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37743089195A44440074BC20 /* TweetTableViewCell.xib */; };
+		377430B3195A47450074BC20 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774308F195A47450074BC20 /* AFHTTPRequestOperation.m */; };
+		377430B4195A47450074BC20 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743091195A47450074BC20 /* AFHTTPRequestOperationManager.m */; };
+		377430B5195A47450074BC20 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743093195A47450074BC20 /* AFHTTPSessionManager.m */; };
+		377430B6195A47450074BC20 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743096195A47450074BC20 /* AFNetworkReachabilityManager.m */; };
+		377430B7195A47450074BC20 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37743098195A47450074BC20 /* AFSecurityPolicy.m */; };
+		377430B8195A47450074BC20 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774309A195A47450074BC20 /* AFURLConnectionOperation.m */; };
+		377430B9195A47450074BC20 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774309C195A47450074BC20 /* AFURLRequestSerialization.m */; };
+		377430BA195A47450074BC20 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774309E195A47450074BC20 /* AFURLResponseSerialization.m */; };
+		377430BB195A47450074BC20 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430A0195A47450074BC20 /* AFURLSessionManager.m */; };
+		377430BC195A47450074BC20 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430A3195A47450074BC20 /* AFNetworkActivityIndicatorManager.m */; };
+		377430BD195A47450074BC20 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430A5195A47450074BC20 /* UIActivityIndicatorView+AFNetworking.m */; };
+		377430BE195A47450074BC20 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430A7195A47450074BC20 /* UIAlertView+AFNetworking.m */; };
+		377430BF195A47450074BC20 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430A9195A47450074BC20 /* UIButton+AFNetworking.m */; };
+		377430C0195A47450074BC20 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430AB195A47450074BC20 /* UIImageView+AFNetworking.m */; };
+		377430C1195A47450074BC20 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430AE195A47450074BC20 /* UIProgressView+AFNetworking.m */; };
+		377430C2195A47450074BC20 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430B0195A47450074BC20 /* UIRefreshControl+AFNetworking.m */; };
+		377430C3195A47450074BC20 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 377430B2195A47450074BC20 /* UIWebView+AFNetworking.m */; };
+		377430C5195A47BD0074BC20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377430C4195A47BD0074BC20 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3774306C195A31870074BC20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3774303E195A31870074BC20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37743045195A31870074BC20;
+			remoteInfo = Ex8_WorldCupTweet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37743046195A31870074BC20 /* Ex8_WorldCupTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ex8_WorldCupTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37743049195A31870074BC20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3774304B195A31870074BC20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3774304D195A31870074BC20 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37743051195A31870074BC20 /* Ex8_WorldCupTweet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ex8_WorldCupTweet-Info.plist"; sourceTree = "<group>"; };
+		37743053195A31870074BC20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37743055195A31870074BC20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37743057195A31870074BC20 /* Ex8_WorldCupTweet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ex8_WorldCupTweet-Prefix.pch"; sourceTree = "<group>"; };
+		37743058195A31870074BC20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37743059195A31870074BC20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3774305C195A31870074BC20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3774305E195A31870074BC20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3774305F195A31870074BC20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37743061195A31870074BC20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37743067195A31870074BC20 /* Ex8_WorldCupTweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ex8_WorldCupTweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37743068195A31870074BC20 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		37743070195A31870074BC20 /* Ex8_WorldCupTweetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ex8_WorldCupTweetTests-Info.plist"; sourceTree = "<group>"; };
+		37743072195A31870074BC20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37743074195A31870074BC20 /* Ex8_WorldCupTweetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ex8_WorldCupTweetTests.m; sourceTree = "<group>"; };
+		3774307E195A33DA0074BC20 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		37743080195A33EE0074BC20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		37743082195A33F40074BC20 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		37743089195A44440074BC20 /* TweetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		3774308E195A47450074BC20 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		3774308F195A47450074BC20 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		37743090195A47450074BC20 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		37743091195A47450074BC20 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		37743092195A47450074BC20 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		37743093195A47450074BC20 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		37743094195A47450074BC20 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		37743095195A47450074BC20 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		37743096195A47450074BC20 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		37743097195A47450074BC20 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		37743098195A47450074BC20 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		37743099195A47450074BC20 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		3774309A195A47450074BC20 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		3774309B195A47450074BC20 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		3774309C195A47450074BC20 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		3774309D195A47450074BC20 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		3774309E195A47450074BC20 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		3774309F195A47450074BC20 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		377430A0195A47450074BC20 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		377430A2195A47450074BC20 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		377430A3195A47450074BC20 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		377430A4195A47450074BC20 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		377430A5195A47450074BC20 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		377430A6195A47450074BC20 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
+		377430A7195A47450074BC20 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		377430A8195A47450074BC20 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		377430A9195A47450074BC20 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		377430AA195A47450074BC20 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		377430AB195A47450074BC20 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		377430AC195A47450074BC20 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		377430AD195A47450074BC20 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		377430AE195A47450074BC20 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		377430AF195A47450074BC20 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		377430B0195A47450074BC20 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		377430B1195A47450074BC20 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		377430B2195A47450074BC20 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		377430C4195A47BD0074BC20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37743043195A31870074BC20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377430C5195A47BD0074BC20 /* QuartzCore.framework in Frameworks */,
+				37743083195A33F40074BC20 /* Social.framework in Frameworks */,
+				37743081195A33EE0074BC20 /* MapKit.framework in Frameworks */,
+				3774307F195A33DA0074BC20 /* Accounts.framework in Frameworks */,
+				3774304C195A31870074BC20 /* CoreGraphics.framework in Frameworks */,
+				3774304E195A31870074BC20 /* UIKit.framework in Frameworks */,
+				3774304A195A31870074BC20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37743064195A31870074BC20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37743069195A31870074BC20 /* XCTest.framework in Frameworks */,
+				3774306B195A31870074BC20 /* UIKit.framework in Frameworks */,
+				3774306A195A31870074BC20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3774303D195A31870074BC20 = {
+			isa = PBXGroup;
+			children = (
+				3774304F195A31870074BC20 /* Ex8_WorldCupTweet */,
+				3774306E195A31870074BC20 /* Ex8_WorldCupTweetTests */,
+				37743048195A31870074BC20 /* Frameworks */,
+				37743047195A31870074BC20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37743047195A31870074BC20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37743046195A31870074BC20 /* Ex8_WorldCupTweet.app */,
+				37743067195A31870074BC20 /* Ex8_WorldCupTweetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37743048195A31870074BC20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				377430C4195A47BD0074BC20 /* QuartzCore.framework */,
+				37743082195A33F40074BC20 /* Social.framework */,
+				37743080195A33EE0074BC20 /* MapKit.framework */,
+				3774307E195A33DA0074BC20 /* Accounts.framework */,
+				37743049195A31870074BC20 /* Foundation.framework */,
+				3774304B195A31870074BC20 /* CoreGraphics.framework */,
+				3774304D195A31870074BC20 /* UIKit.framework */,
+				37743068195A31870074BC20 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3774304F195A31870074BC20 /* Ex8_WorldCupTweet */ = {
+			isa = PBXGroup;
+			children = (
+				37743058195A31870074BC20 /* AppDelegate.h */,
+				37743059195A31870074BC20 /* AppDelegate.m */,
+				3774305B195A31870074BC20 /* Main.storyboard */,
+				3774305E195A31870074BC20 /* ViewController.h */,
+				3774305F195A31870074BC20 /* ViewController.m */,
+				37743061195A31870074BC20 /* Images.xcassets */,
+				37743050195A31870074BC20 /* Supporting Files */,
+				37743089195A44440074BC20 /* TweetTableViewCell.xib */,
+			);
+			path = Ex8_WorldCupTweet;
+			sourceTree = "<group>";
+		};
+		37743050195A31870074BC20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3774308C195A47450074BC20 /* AFNetworking lib */,
+				37743051195A31870074BC20 /* Ex8_WorldCupTweet-Info.plist */,
+				37743052195A31870074BC20 /* InfoPlist.strings */,
+				37743055195A31870074BC20 /* main.m */,
+				37743057195A31870074BC20 /* Ex8_WorldCupTweet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3774306E195A31870074BC20 /* Ex8_WorldCupTweetTests */ = {
+			isa = PBXGroup;
+			children = (
+				37743074195A31870074BC20 /* Ex8_WorldCupTweetTests.m */,
+				3774306F195A31870074BC20 /* Supporting Files */,
+			);
+			path = Ex8_WorldCupTweetTests;
+			sourceTree = "<group>";
+		};
+		3774306F195A31870074BC20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37743070195A31870074BC20 /* Ex8_WorldCupTweetTests-Info.plist */,
+				37743071195A31870074BC20 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3774308C195A47450074BC20 /* AFNetworking lib */ = {
+			isa = PBXGroup;
+			children = (
+				3774308D195A47450074BC20 /* AFNetworking */,
+				377430A1195A47450074BC20 /* UIKit+AFNetworking */,
+			);
+			path = "AFNetworking lib";
+			sourceTree = "<group>";
+		};
+		3774308D195A47450074BC20 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				3774308E195A47450074BC20 /* AFHTTPRequestOperation.h */,
+				3774308F195A47450074BC20 /* AFHTTPRequestOperation.m */,
+				37743090195A47450074BC20 /* AFHTTPRequestOperationManager.h */,
+				37743091195A47450074BC20 /* AFHTTPRequestOperationManager.m */,
+				37743092195A47450074BC20 /* AFHTTPSessionManager.h */,
+				37743093195A47450074BC20 /* AFHTTPSessionManager.m */,
+				37743094195A47450074BC20 /* AFNetworking.h */,
+				37743095195A47450074BC20 /* AFNetworkReachabilityManager.h */,
+				37743096195A47450074BC20 /* AFNetworkReachabilityManager.m */,
+				37743097195A47450074BC20 /* AFSecurityPolicy.h */,
+				37743098195A47450074BC20 /* AFSecurityPolicy.m */,
+				37743099195A47450074BC20 /* AFURLConnectionOperation.h */,
+				3774309A195A47450074BC20 /* AFURLConnectionOperation.m */,
+				3774309B195A47450074BC20 /* AFURLRequestSerialization.h */,
+				3774309C195A47450074BC20 /* AFURLRequestSerialization.m */,
+				3774309D195A47450074BC20 /* AFURLResponseSerialization.h */,
+				3774309E195A47450074BC20 /* AFURLResponseSerialization.m */,
+				3774309F195A47450074BC20 /* AFURLSessionManager.h */,
+				377430A0195A47450074BC20 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		377430A1195A47450074BC20 /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				377430A2195A47450074BC20 /* AFNetworkActivityIndicatorManager.h */,
+				377430A3195A47450074BC20 /* AFNetworkActivityIndicatorManager.m */,
+				377430A4195A47450074BC20 /* UIActivityIndicatorView+AFNetworking.h */,
+				377430A5195A47450074BC20 /* UIActivityIndicatorView+AFNetworking.m */,
+				377430A6195A47450074BC20 /* UIAlertView+AFNetworking.h */,
+				377430A7195A47450074BC20 /* UIAlertView+AFNetworking.m */,
+				377430A8195A47450074BC20 /* UIButton+AFNetworking.h */,
+				377430A9195A47450074BC20 /* UIButton+AFNetworking.m */,
+				377430AA195A47450074BC20 /* UIImageView+AFNetworking.h */,
+				377430AB195A47450074BC20 /* UIImageView+AFNetworking.m */,
+				377430AC195A47450074BC20 /* UIKit+AFNetworking.h */,
+				377430AD195A47450074BC20 /* UIProgressView+AFNetworking.h */,
+				377430AE195A47450074BC20 /* UIProgressView+AFNetworking.m */,
+				377430AF195A47450074BC20 /* UIRefreshControl+AFNetworking.h */,
+				377430B0195A47450074BC20 /* UIRefreshControl+AFNetworking.m */,
+				377430B1195A47450074BC20 /* UIWebView+AFNetworking.h */,
+				377430B2195A47450074BC20 /* UIWebView+AFNetworking.m */,
+			);
+			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37743045195A31870074BC20 /* Ex8_WorldCupTweet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37743078195A31870074BC20 /* Build configuration list for PBXNativeTarget "Ex8_WorldCupTweet" */;
+			buildPhases = (
+				37743042195A31870074BC20 /* Sources */,
+				37743043195A31870074BC20 /* Frameworks */,
+				37743044195A31870074BC20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ex8_WorldCupTweet;
+			productName = Ex8_WorldCupTweet;
+			productReference = 37743046195A31870074BC20 /* Ex8_WorldCupTweet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37743066195A31870074BC20 /* Ex8_WorldCupTweetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3774307B195A31870074BC20 /* Build configuration list for PBXNativeTarget "Ex8_WorldCupTweetTests" */;
+			buildPhases = (
+				37743063195A31870074BC20 /* Sources */,
+				37743064195A31870074BC20 /* Frameworks */,
+				37743065195A31870074BC20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3774306D195A31870074BC20 /* PBXTargetDependency */,
+			);
+			name = Ex8_WorldCupTweetTests;
+			productName = Ex8_WorldCupTweetTests;
+			productReference = 37743067195A31870074BC20 /* Ex8_WorldCupTweetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3774303E195A31870074BC20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Onzondev Innovation Co., Ltd.";
+				TargetAttributes = {
+					37743066195A31870074BC20 = {
+						TestTargetID = 37743045195A31870074BC20;
+					};
+				};
+			};
+			buildConfigurationList = 37743041195A31870074BC20 /* Build configuration list for PBXProject "Ex8_WorldCupTweet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3774303D195A31870074BC20;
+			productRefGroup = 37743047195A31870074BC20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37743045195A31870074BC20 /* Ex8_WorldCupTweet */,
+				37743066195A31870074BC20 /* Ex8_WorldCupTweetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37743044195A31870074BC20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37743062195A31870074BC20 /* Images.xcassets in Resources */,
+				37743054195A31870074BC20 /* InfoPlist.strings in Resources */,
+				3774305D195A31870074BC20 /* Main.storyboard in Resources */,
+				3774308B195A44440074BC20 /* TweetTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37743065195A31870074BC20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37743073195A31870074BC20 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37743042195A31870074BC20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377430B3195A47450074BC20 /* AFHTTPRequestOperation.m in Sources */,
+				377430C0195A47450074BC20 /* UIImageView+AFNetworking.m in Sources */,
+				37743060195A31870074BC20 /* ViewController.m in Sources */,
+				377430B4195A47450074BC20 /* AFHTTPRequestOperationManager.m in Sources */,
+				377430C1195A47450074BC20 /* UIProgressView+AFNetworking.m in Sources */,
+				377430B6195A47450074BC20 /* AFNetworkReachabilityManager.m in Sources */,
+				377430BA195A47450074BC20 /* AFURLResponseSerialization.m in Sources */,
+				377430B8195A47450074BC20 /* AFURLConnectionOperation.m in Sources */,
+				377430BF195A47450074BC20 /* UIButton+AFNetworking.m in Sources */,
+				377430BD195A47450074BC20 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				377430B7195A47450074BC20 /* AFSecurityPolicy.m in Sources */,
+				377430C2195A47450074BC20 /* UIRefreshControl+AFNetworking.m in Sources */,
+				377430C3195A47450074BC20 /* UIWebView+AFNetworking.m in Sources */,
+				377430B5195A47450074BC20 /* AFHTTPSessionManager.m in Sources */,
+				377430BE195A47450074BC20 /* UIAlertView+AFNetworking.m in Sources */,
+				377430B9195A47450074BC20 /* AFURLRequestSerialization.m in Sources */,
+				377430BC195A47450074BC20 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				377430BB195A47450074BC20 /* AFURLSessionManager.m in Sources */,
+				3774305A195A31870074BC20 /* AppDelegate.m in Sources */,
+				37743056195A31870074BC20 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37743063195A31870074BC20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37743075195A31870074BC20 /* Ex8_WorldCupTweetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3774306D195A31870074BC20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37743045195A31870074BC20 /* Ex8_WorldCupTweet */;
+			targetProxy = 3774306C195A31870074BC20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37743052195A31870074BC20 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37743053195A31870074BC20 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3774305B195A31870074BC20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3774305C195A31870074BC20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37743071195A31870074BC20 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37743072195A31870074BC20 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37743076195A31870074BC20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		37743077195A31870074BC20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37743079195A31870074BC20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ex8_WorldCupTweet/Ex8_WorldCupTweet-Prefix.pch";
+				INFOPLIST_FILE = "Ex8_WorldCupTweet/Ex8_WorldCupTweet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3774307A195A31870074BC20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ex8_WorldCupTweet/Ex8_WorldCupTweet-Prefix.pch";
+				INFOPLIST_FILE = "Ex8_WorldCupTweet/Ex8_WorldCupTweet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3774307C195A31870074BC20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ex8_WorldCupTweet.app/Ex8_WorldCupTweet";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ex8_WorldCupTweet/Ex8_WorldCupTweet-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Ex8_WorldCupTweetTests/Ex8_WorldCupTweetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3774307D195A31870074BC20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ex8_WorldCupTweet.app/Ex8_WorldCupTweet";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ex8_WorldCupTweet/Ex8_WorldCupTweet-Prefix.pch";
+				INFOPLIST_FILE = "Ex8_WorldCupTweetTests/Ex8_WorldCupTweetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37743041195A31870074BC20 /* Build configuration list for PBXProject "Ex8_WorldCupTweet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37743076195A31870074BC20 /* Debug */,
+				37743077195A31870074BC20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37743078195A31870074BC20 /* Build configuration list for PBXNativeTarget "Ex8_WorldCupTweet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37743079195A31870074BC20 /* Debug */,
+				3774307A195A31870074BC20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3774307B195A31870074BC20 /* Build configuration list for PBXNativeTarget "Ex8_WorldCupTweetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3774307C195A31870074BC20 /* Debug */,
+				3774307D195A31870074BC20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3774303E195A31870074BC20 /* Project object */;
+}
