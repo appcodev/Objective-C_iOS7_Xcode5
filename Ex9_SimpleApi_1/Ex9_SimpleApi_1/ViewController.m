@@ -8,12 +8,12 @@
 
 #import "ViewController.h"
 
-#define SIMPLE_API_1    @"http://localhost/simple-api/1.0/file/hello"
+#define SIMPLE_API_1    @"http://www.appcodev.com/simple-api/1.0/file/hello"
 #define XML             @".xml"
 #define JSON            @".json"
 
 @interface ViewController () <NSURLConnectionDataDelegate,UITableViewDataSource,NSXMLParserDelegate>{
-    NSMutableData *responeData;
+    NSMutableData *responseData;
     NSString *currentType;
     NSMutableArray *hosts;
     
@@ -88,7 +88,7 @@
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:req delegate:self];
     
     if (connection) {
-        responeData = [NSMutableData new];
+        responseData = [NSMutableData new];
         hosts = [NSMutableArray new];
     }
     
@@ -149,11 +149,11 @@
 
 /// connection delegate
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    [responeData setLength:0];//initial
+    [responseData setLength:0];//initial
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-    [responeData appendData:data];//++
+    [responseData appendData:data];//++
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
@@ -161,18 +161,18 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    NSString *rawData = [[NSString alloc] initWithData:responeData encoding:NSUTF8StringEncoding];
+    NSString *rawData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     rawOutput.text = rawData;
     
     if ([currentType isEqualToString:XML]) {
         
-        NSXMLParser *parser = [[NSXMLParser alloc] initWithData:responeData];
+        NSXMLParser *parser = [[NSXMLParser alloc] initWithData:responseData];
         parser.delegate = self;
         [parser parse];
         
     }else if([currentType isEqualToString:JSON]){
         NSError *jsonError = nil;
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responeData
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseData
                                                             options:0
                                                               error:&jsonError];
         
