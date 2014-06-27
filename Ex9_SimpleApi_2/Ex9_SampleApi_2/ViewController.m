@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#define API_URL     @"http://localhost/simple-api/1.0/file/footballteam"
+#define API_URL     @"http://www.appcodev.com/simple-api/1.0/file/footballteam"
 #define XML         @".xml"
 #define JSON        @".json"
 
